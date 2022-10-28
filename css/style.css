@@ -1,0 +1,1392 @@
+@charset "UTF-8";
+/* В аругумент миксина мы будем указывать несколько вариантов брейкпоинтов, таких как:
+
+    - phone
+    - tab-port
+    - tab-land
+    - big-screen
+
+    */
+@keyframes BtnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* line 1, ../../Project-ballons/sass/base/_base.sass */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 6, ../../Project-ballons/sass/base/_base.sass */
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 6, ../../Project-ballons/sass/base/_base.sass */
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 6, ../../Project-ballons/sass/base/_base.sass */
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 6, ../../Project-ballons/sass/base/_base.sass */
+  html {
+    font-size: 30%;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  /* line 6, ../../Project-ballons/sass/base/_base.sass */
+  html {
+    font-size: 75%;
+  }
+}
+
+/* line 20, ../../Project-ballons/sass/base/_base.sass */
+body {
+  padding: 5rem;
+  background-color: #ffffff;
+}
+
+/* line 24, ../../Project-ballons/sass/base/_base.sass */
+.container {
+  background-color: #F7F7F7;
+  position: relative;
+  z-index: 0;
+}
+
+/* line 1, ../../Project-ballons/sass/base/_typography.sass */
+body {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+}
+
+/* line 11, ../../Project-ballons/sass/base/_typography.sass */
+.title-first {
+  color: #ffffff;
+}
+
+/* line 13, ../../Project-ballons/sass/base/_typography.sass */
+.title-first__main {
+  display: block;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation-name: leftToRight;
+  animation-duration: 1.7s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 13, ../../Project-ballons/sass/base/_typography.sass */
+  .title-first__main {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 13, ../../Project-ballons/sass/base/_typography.sass */
+  .title-first__main {
+    font-size: 3.6rem;
+    letter-spacing: .5rem;
+    margin-bottom: 0;
+  }
+}
+
+/* line 33, ../../Project-ballons/sass/base/_typography.sass */
+.title-first__secondary {
+  display: block;
+  font-weight: 100;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: .5rem;
+  animation-name: RightToLeft;
+  animation-duration: 1.7s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+  backface-visibility: hidden;
+  margin-bottom: 6.5rem;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 33, ../../Project-ballons/sass/base/_typography.sass */
+  .title-first__secondary {
+    font-size: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 33, ../../Project-ballons/sass/base/_typography.sass */
+  .title-first__secondary {
+    font-size: 3.2rem;
+    letter-spacing: .2rem;
+  }
+}
+
+/* line 53, ../../Project-ballons/sass/base/_typography.sass */
+.title-secondary {
+  text-align: center;
+  display: inline-block;
+  font-size: 3.6rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: linear-gradient(90deg, rgba(103, 58, 183, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all .4s;
+  backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 53, ../../Project-ballons/sass/base/_typography.sass */
+  .title-secondary {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 53, ../../Project-ballons/sass/base/_typography.sass */
+  .title-secondary {
+    letter-spacing: .6rem;
+  }
+}
+
+/* line 70, ../../Project-ballons/sass/base/_typography.sass */
+.title-secondary:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+/* line 73, ../../Project-ballons/sass/base/_typography.sass */
+.title-secondary_white {
+  color: #ffffff;
+}
+
+/* line 76, ../../Project-ballons/sass/base/_typography.sass */
+.title-third {
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 76, ../../Project-ballons/sass/base/_typography.sass */
+  .title-third {
+    font-size: 1.8rem;
+  }
+}
+
+/* line 84, ../../Project-ballons/sass/base/_typography.sass */
+.paragraph {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 84, ../../Project-ballons/sass/base/_typography.sass */
+  .paragraph {
+    font-size: 1.5rem;
+  }
+}
+
+/* line 1, ../../Project-ballons/sass/base/_utilities.sass */
+.text-align-center {
+  text-align: center;
+}
+
+/* line 5, ../../Project-ballons/sass/base/_utilities.sass */
+.margin-bottom-10px {
+  margin-bottom: 1rem;
+}
+
+/* line 8, ../../Project-ballons/sass/base/_utilities.sass */
+.margin-bottom-30px {
+  margin-bottom: 3rem;
+}
+
+/* line 11, ../../Project-ballons/sass/base/_utilities.sass */
+.margin-bottom-50px {
+  margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 11, ../../Project-ballons/sass/base/_utilities.sass */
+  .margin-bottom-50px {
+    margin-bottom: 7rem;
+  }
+}
+
+/* line 17, ../../Project-ballons/sass/base/_utilities.sass */
+.margin-bottom-80px {
+  margin-bottom: 8rem;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 17, ../../Project-ballons/sass/base/_utilities.sass */
+  .margin-bottom-80px {
+    margin-bottom: 5rem;
+  }
+}
+
+/* line 5, ../../Project-ballons/sass/components/_button.sass */
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #777777;
+  padding: 1.5rem 4rem;
+  background: #ffffff;
+  border-radius: 5rem;
+  transition: all .3s;
+  position: relative;
+  font-size: 2rem;
+  border: none;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 5, ../../Project-ballons/sass/components/_button.sass */
+  .btn, .btn:link, .btn:visited {
+    font-size: 1.8rem;
+    padding: 1.5rem 3.7rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 5, ../../Project-ballons/sass/components/_button.sass */
+  .btn, .btn:link, .btn:visited {
+    padding: 2rem 5rem;
+  }
+}
+
+/* line 20, ../../Project-ballons/sass/components/_button.sass */
+.btn:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+/* line 23, ../../Project-ballons/sass/components/_button.sass */
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.5) scaleY(1.7);
+}
+
+/* line 26, ../../Project-ballons/sass/components/_button.sass */
+.btn:active {
+  transform: translateY(-0.2rem);
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+/* line 29, ../../Project-ballons/sass/components/_button.sass */
+.btn::after {
+  content: "";
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+/* line 41, ../../Project-ballons/sass/components/_button.sass */
+.btn_animated {
+  animation: BtnToUp .5s ease-out .7s;
+  animation-fill-mode: backwards;
+}
+
+/* line 46, ../../Project-ballons/sass/components/_button.sass */
+.btn_brown, .btn_brown:link, .btn_brown:visited {
+  background: #A14F03;
+  color: #ffffff;
+}
+
+/* line 50, ../../Project-ballons/sass/components/_button.sass */
+.btn_brown::after {
+  background: #A14F03;
+}
+
+/* line 2, ../../Project-ballons/sass/components/_button-text.sass */
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  font-weight: 700;
+  color: #673ab7;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px #673ab7 solid;
+  display: inline-block;
+  transition: .5 all;
+}
+
+/* line 13, ../../Project-ballons/sass/components/_button-text.sass */
+.btn-text:hover {
+  background-color: #673ab7;
+  color: #ffffff;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.2rem);
+}
+
+/* line 18, ../../Project-ballons/sass/components/_button-text.sass */
+.btn-text:active {
+  transform: translateY(0rem);
+}
+
+/* line 1, ../../Project-ballons/sass/components/_composition.sass */
+.composition {
+  position: relative;
+}
+
+/* line 3, ../../Project-ballons/sass/components/_composition.sass */
+.composition__photo {
+  width: 55%;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+  position: absolute;
+  z-index: 10;
+  transition: all .2s;
+  outline-offset: 1rem;
+}
+
+/* line 11, ../../Project-ballons/sass/components/_composition.sass */
+.composition__photo_n1 {
+  top: 0;
+  left: 0rem;
+}
+
+/* line 14, ../../Project-ballons/sass/components/_composition.sass */
+.composition__photo_n2 {
+  top: 2rem;
+  right: 0rem;
+}
+
+/* line 17, ../../Project-ballons/sass/components/_composition.sass */
+.composition__photo_n3 {
+  top: 13rem;
+  left: 10rem;
+}
+
+/* line 20, ../../Project-ballons/sass/components/_composition.sass */
+.composition__photo:hover {
+  outline: 1rem solid #673ab7;
+  transform: scale(1.1);
+  z-index: 20;
+}
+
+/* line 24, ../../Project-ballons/sass/components/_composition.sass */
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.95);
+}
+
+/* line 1, ../../Project-ballons/sass/components/_adventure-card.sass */
+.adventure-card {
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: .5rem;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: .2s all;
+}
+
+/* line 8, ../../Project-ballons/sass/components/_adventure-card.sass */
+.adventure-card:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+}
+
+/* line 10, ../../Project-ballons/sass/components/_adventure-card.sass */
+.adventure-card__icon {
+  font-size: 6rem;
+  background: linear-gradient(90deg, rgba(103, 58, 183, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* line 1, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour {
+  height: 50rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 900px), (hover: none) {
+  /* line 1, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour {
+    height: auto;
+  }
+}
+
+/* line 9, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__side {
+  height: 50rem;
+  transition: .7s all ease-out;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px), (hover: none) {
+  /* line 9, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour__side {
+    height: auto;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 900px), (hover: none) {
+  /* line 25, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour__side_front {
+    padding-bottom: 13rem;
+  }
+}
+
+/* line 29, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__side_back {
+  background: green;
+  transform: rotateY(180deg);
+  background: linear-gradient(120deg, #673ab7, #A14F03);
+}
+
+@media only screen and (max-width: 900px), (hover: none) {
+  /* line 29, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour__side_back {
+    transform: rotateY(0deg);
+    padding: 5rem;
+    padding-top: 12rem;
+    margin-top: -11rem;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  }
+}
+
+/* line 42, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(-180deg);
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 42, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour:hover .card-tour__side_front {
+    transform: rotateY(0deg);
+  }
+}
+
+/* line 46, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
+}
+
+/* line 49, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__img {
+  background-blend-mode: hard-light;
+  height: 21rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+/* line 53, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__img_1 {
+  background: #673ab7 url(../img/12.jpg.jpg) center/cover no-repeat;
+}
+
+/* line 55, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__img_2 {
+  background: #673ab7 url(../img/13.jpg.jpg) center/cover no-repeat;
+}
+
+/* line 57, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__img_3 {
+  background: #673ab7 url(../img/01.png.webp) center/cover no-repeat;
+}
+
+@media only screen and (max-width: 900px), (hover: none) {
+  /* line 49, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour__img {
+    height: 30rem;
+  }
+}
+
+/* line 62, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__title {
+  font-size: 2.8rem;
+  letter-spacing: .2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  position: absolute;
+  top: 17rem;
+  right: 0rem;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 62, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour__title {
+    top: 25rem;
+    font-size: 3.8rem;
+  }
+}
+
+/* line 75, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__span {
+  background: linear-gradient(90deg, #673ab7, #A14F03);
+  padding: 1rem 2rem .3rem 2rem;
+}
+
+/* line 79, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__span_2 {
+  position: absolute;
+  top: 3.4rem;
+  right: 0;
+  padding-bottom: 1rem;
+  padding-top: 0rem;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 79, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour__span_2 {
+    top: 4.4rem;
+  }
+}
+
+/* line 89, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__descr ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+}
+
+/* line 95, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__descr ul li {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  color: #777777;
+  border-bottom: 1px solid #777777;
+  display: inline-block;
+}
+
+/* line 101, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__descr ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 95, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour__descr ul li {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 95, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour__descr ul li {
+    font-size: 2rem;
+  }
+}
+
+/* line 109, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__backSide-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 900px), (hover: none) {
+  /* line 109, ../../Project-ballons/sass/components/_tour-card.sass */
+  .card-tour__backSide-box {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    text-align: center;
+  }
+}
+
+/* line 121, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__text {
+  margin-bottom: 8rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* line 127, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__text_1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+/* line 131, ../../Project-ballons/sass/components/_tour-card.sass */
+.card-tour__text_2 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+/* line 1, ../../Project-ballons/sass/components/_feedBack-card.sass */
+.feedBack-card {
+  width: 85%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 6rem;
+  transform: skewX(330deg);
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 1, ../../Project-ballons/sass/components/_feedBack-card.sass */
+  .feedBack-card {
+    transform: skewX(350deg);
+    padding: 3rem;
+  }
+}
+
+/* line 11, ../../Project-ballons/sass/components/_feedBack-card.sass */
+.feedBack-card > * {
+  transform: skewX(-330deg);
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 11, ../../Project-ballons/sass/components/_feedBack-card.sass */
+  .feedBack-card > * {
+    transform: skewX(-350deg);
+    text-align: center;
+  }
+}
+
+/* line 16, ../../Project-ballons/sass/components/_feedBack-card.sass */
+.feedBack-card__img {
+  width: 15rem;
+  height: 15rem;
+  background: green;
+  float: left;
+  border-radius: 100rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  margin-right: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 16, ../../Project-ballons/sass/components/_feedBack-card.sass */
+  .feedBack-card__img {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+}
+
+/* line 31, ../../Project-ballons/sass/components/_feedBack-card.sass */
+.feedBack-card__img img {
+  height: 100%;
+  transform: scale(1.2);
+  transition: all .5s;
+}
+
+/* line 37, ../../Project-ballons/sass/components/_feedBack-card.sass */
+.feedBack-card__name {
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  opacity: 0;
+  transition: all .5s;
+}
+
+/* line 50, ../../Project-ballons/sass/components/_feedBack-card.sass */
+.feedBack-card:hover .feedBack-card__name {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+/* line 53, ../../Project-ballons/sass/components/_feedBack-card.sass */
+.feedBack-card:hover img {
+  transform: scale(1);
+  filter: blur(0.3rem) brightness(70%);
+}
+
+/* line 1, ../../Project-ballons/sass/components/_bg-video.sass */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+}
+
+/* line 10, ../../Project-ballons/sass/components/_bg-video.sass */
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(103, 58, 183, 0.7), rgba(0, 0, 0, 0.7));
+  z-index: -1;
+}
+
+/* line 1, ../../Project-ballons/sass/components/_form.sass */
+.book {
+  height: 50rem;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 57%, rgba(186, 133, 80, 0.8) 57%, rgba(161, 79, 3, 0.8) 100%), url(../img/bg-form.jpg) center/cover no-repeat;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 1, ../../Project-ballons/sass/components/_form.sass */
+  .book {
+    background: linear-gradient(115deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 507%, rgba(186, 133, 80, 0.8) 57%, rgba(161, 79, 3, 0.8) 100%), url(../img/bg-form.jpg) center/cover no-repeat;
+  }
+}
+
+/* line 11, ../../Project-ballons/sass/components/_form.sass */
+.form {
+  width: 70%;
+  padding-top: 5rem;
+  padding-left: 5rem;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 11, ../../Project-ballons/sass/components/_form.sass */
+  .form {
+    width: 100%;
+    padding-top: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+/* line 19, ../../Project-ballons/sass/components/_form.sass */
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* line 21, ../../Project-ballons/sass/components/_form.sass */
+.form__group:nth-child(4) {
+  margin-bottom: 4rem;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 24, ../../Project-ballons/sass/components/_form.sass */
+  .form__group:not(:last-child) {
+    margin-bottom: 0;
+  }
+  /* line 26, ../../Project-ballons/sass/components/_form.sass */
+  .form__group:nth-child(4) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* line 35, ../../Project-ballons/sass/components/_form.sass */
+.form__input {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  font-weight: 400;
+  color: #000000;
+  padding: 2rem 0rem 2rem 2rem;
+  background: #ffffff;
+  border: none;
+  border-bottom: .3rem solid transparent;
+  border-radius: .5rem;
+  width: 75%;
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 35, ../../Project-ballons/sass/components/_form.sass */
+  .form__input {
+    width: 90%;
+    box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* line 49, ../../Project-ballons/sass/components/_form.sass */
+.form__input:focus {
+  outline: none;
+  border-bottom: .3rem solid #66D763;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+/* line 53, ../../Project-ballons/sass/components/_form.sass */
+.form__input:focus:invalid {
+  border-bottom: .3rem solid #D76363;
+}
+
+/* line 56, ../../Project-ballons/sass/components/_form.sass */
+.form__label {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  font-weight: 400;
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  transition: .2s all;
+}
+
+/* line 67, ../../Project-ballons/sass/components/_form.sass */
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: none;
+  transform: translateY(-3rem);
+}
+
+/* line 72, ../../Project-ballons/sass/components/_form.sass */
+.form__group-radio {
+  display: inline-block;
+}
+
+/* line 74, ../../Project-ballons/sass/components/_form.sass */
+.form__group-radio:not(:last-child) {
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 72, ../../Project-ballons/sass/components/_form.sass */
+  .form__group-radio {
+    display: block;
+  }
+  /* line 78, ../../Project-ballons/sass/components/_form.sass */
+  .form__group-radio:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+/* line 82, ../../Project-ballons/sass/components/_form.sass */
+.form__input-radio {
+  display: none;
+}
+
+/* line 85, ../../Project-ballons/sass/components/_form.sass */
+.form__label-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+}
+
+/* line 90, ../../Project-ballons/sass/components/_form.sass */
+.form__button-radio {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #A14F03;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+}
+
+/* line 99, ../../Project-ballons/sass/components/_form.sass */
+.form__button-radio::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background: #A14F03;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .2s all;
+}
+
+/* line 113, ../../Project-ballons/sass/components/_form.sass */
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
+}
+
+/* line 1, ../../Project-ballons/sass/layout/_grid.sass */
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+/* line 4, ../../Project-ballons/sass/layout/_grid.sass */
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+  margin-bottom: 4rem;
+}
+
+/* line 8, ../../Project-ballons/sass/abstracts/_mixins.sass */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 1, ../../Project-ballons/sass/layout/_grid.sass */
+  .row {
+    max-width: 90.1rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 1, ../../Project-ballons/sass/layout/_grid.sass */
+  .row {
+    max-width: 60rem;
+  }
+}
+
+/* line 17, ../../Project-ballons/sass/layout/_grid.sass */
+.col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+/* line 20, ../../Project-ballons/sass/layout/_grid.sass */
+.col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 20, ../../Project-ballons/sass/layout/_grid.sass */
+  .col-1-of-3 {
+    width: calc((100% - 2 * 2rem) / 3);
+  }
+}
+
+/* line 25, ../../Project-ballons/sass/layout/_grid.sass */
+.col-2-of-3 {
+  width: calc( 2 * ((100% - 2 * 6rem) / 3));
+}
+
+/* line 29, ../../Project-ballons/sass/layout/_grid.sass */
+.col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 29, ../../Project-ballons/sass/layout/_grid.sass */
+  .col-1-of-4 {
+    width: calc((100% - 3 * 2rem) / 4);
+  }
+}
+
+/* line 34, ../../Project-ballons/sass/layout/_grid.sass */
+.col-2-of-4 {
+  width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+
+/* line 37, ../../Project-ballons/sass/layout/_grid.sass */
+.col-3-of-4 {
+  width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+
+/* line 41, ../../Project-ballons/sass/layout/_grid.sass */
+[class^="col-"] {
+  float: left;
+}
+
+/* line 43, ../../Project-ballons/sass/layout/_grid.sass */
+[class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 46, ../../Project-ballons/sass/layout/_grid.sass */
+  [class^="col-"]:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 41, ../../Project-ballons/sass/layout/_grid.sass */
+  [class^="col-"] {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 4rem;
+  }
+}
+
+/* line 1, ../../Project-ballons/sass/layout/_header.sass */
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(103, 58, 183, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/i.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+@media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px) {
+  /* line 1, ../../Project-ballons/sass/layout/_header.sass */
+  .header {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0.03%, rgba(255, 255, 255, 0.7) 99.94%), url(../img/i.jpg) center/cover no-repeat;
+  }
+}
+
+/* line 15, ../../Project-ballons/sass/layout/_header.sass */
+.header__logo {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  height: 7rem;
+  width: 5.6rem;
+}
+
+/* line 21, ../../Project-ballons/sass/layout/_header.sass */
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  top: 50%;
+}
+
+/* line 1, ../../Project-ballons/sass/layout/_footer.sass */
+.footer {
+  padding: 8rem;
+  background: #333333;
+}
+
+/* line 4, ../../Project-ballons/sass/layout/_footer.sass */
+.footer__logo {
+  width: 12rem;
+}
+
+/* line 6, ../../Project-ballons/sass/layout/_footer.sass */
+.footer__list {
+  list-style: none;
+  text-align: center;
+}
+
+/* line 9, ../../Project-ballons/sass/layout/_footer.sass */
+.footer__item {
+  display: inline-block;
+}
+
+/* line 11, ../../Project-ballons/sass/layout/_footer.sass */
+.footer__item:not(:last-child) {
+  margin-right: 5rem;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 14, ../../Project-ballons/sass/layout/_footer.sass */
+  .footer__item:not(:last-child) {
+    margin-right: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 9, ../../Project-ballons/sass/layout/_footer.sass */
+  .footer__item {
+    margin: 0;
+    padding: 2rem;
+  }
+}
+
+/* line 21, ../../Project-ballons/sass/layout/_footer.sass */
+.footer__link:link, .footer__link:visited {
+  color: #777777;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  font-weight: 300;
+  display: inline-block;
+  transition: all .3s;
+}
+
+/* line 31, ../../Project-ballons/sass/layout/_footer.sass */
+.footer__link:hover {
+  transform: rotate(5deg) scale(1.2);
+  color: #A14F03;
+  text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+/* line 2, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__toggle {
+  display: none;
+}
+
+/* line 4, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__button {
+  background: #ffffff;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 10rem;
+  right: 10rem;
+  z-index: 200;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+/* line 17, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__background {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: radial-gradient(#673ab7, #A14F03);
+  position: fixed;
+  right: 11rem;
+  top: 11rem;
+  z-index: 100;
+  transition: all .7s;
+  /* transform: scale(80) */
+}
+
+/* line 28, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 150;
+  opacity: 0;
+  width: 0;
+  transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+/* line 37, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  width: 100%;
+}
+
+/* line 45, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__item {
+  text-align: center;
+}
+
+/* line 47, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__item:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+/* line 50, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__link:link, .navigation__link:visited {
+  font-size: 4rem;
+  color: #ffffff;
+  letter-spacing: .5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, transparent 0%, transparent 50%, #ffffff 50%);
+  background-size: 220%;
+  padding: 1rem 2rem;
+  transition: all .4s;
+  display: inline-block;
+}
+
+/* line 62, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #A14F03;
+  transform: translateX(1rem);
+}
+
+/* line 66, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__toggle:checked ~ .navigation__background {
+  transform: scale(80);
+}
+
+/* line 68, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__toggle:checked ~ .navigation__nav {
+  width: 100%;
+  opacity: 1;
+}
+
+/* line 72, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__icon {
+  position: relative;
+  margin-top: 3.7rem;
+}
+
+/* line 75, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  width: 3rem;
+  height: .2rem;
+  background: #000000;
+  display: inline-block;
+}
+
+/* line 82, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all .2s;
+}
+
+/* line 88, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__icon::before {
+  top: -.8rem;
+}
+
+/* line 90, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__icon::after {
+  top: .8rem;
+}
+
+/* line 93, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem;
+}
+
+/* line 95, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem;
+}
+
+/* line 98, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__toggle:checked + .navigation__button .navigation__icon {
+  background: transparent;
+}
+
+/* line 100, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__toggle:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+/* line 103, ../../Project-ballons/sass/layout/_navigation.sass */
+.navigation__toggle:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+/* line 1, ../../Project-ballons/sass/pages/_home.sass */
+.section-about {
+  padding-top: 8rem;
+  margin-bottom: 20rem;
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 1, ../../Project-ballons/sass/pages/_home.sass */
+  .section-about {
+    margin-bottom: 13rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 1, ../../Project-ballons/sass/pages/_home.sass */
+  .section-about {
+    margin-bottom: 40rem;
+  }
+}
+
+/* line 9, ../../Project-ballons/sass/pages/_home.sass */
+.section-adventure {
+  padding: 21rem 0;
+  background: linear-gradient(90deg, rgba(103, 58, 183, 0.9), rgba(0, 0, 0, 0.7)), url(../img/section-adventure.jpg) center/cover no-repeat;
+  transform: skewY(7deg);
+}
+
+/* line 13, ../../Project-ballons/sass/pages/_home.sass */
+.section-adventure > * {
+  transform: skewY(-7deg);
+}
+
+@media only screen and (max-width: 1240px) {
+  /* line 9, ../../Project-ballons/sass/pages/_home.sass */
+  .section-adventure {
+    padding: 15rem 0;
+  }
+}
+
+/* line 18, ../../Project-ballons/sass/pages/_home.sass */
+.section-tour {
+  padding-top: 21rem;
+  margin-bottom: 8rem;
+}
+
+/* line 22, ../../Project-ballons/sass/pages/_home.sass */
+.section-feedBack {
+  padding: 8rem 0rem;
+  position: relative;
+}
+
+/* line 26, ../../Project-ballons/sass/pages/_home.sass */
+.section-book {
+  padding: 10rem;
+  background: linear-gradient(90deg, #673ab7, #A14F03);
+}
+
+@media only screen and (max-width: 900px) {
+  /* line 26, ../../Project-ballons/sass/pages/_home.sass */
+  .section-book {
+    padding: 4rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
